@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lamu Sports Hub</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>⚽ Lamu Sports Hub</h1>
+    <nav>
+        <button onclick="showSection('standings')">Standings</button>
+        <button onclick="showSection('teams')">Teams</button>
+        <button onclick="showSection('matches')">Matchday</button>
+    </nav>
+</header>
+
+<section id="standings" class="active">
+    <h2>League Table</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>#</th><th>Club</th><th>MP</th><th>W</th><th>D</th><th>L</th><th>GF</th><th>GA</th><th>GD</th><th>Pts</th>
+            </tr>
+        </thead>
+        <tbody id="tableBody"></tbody>
+    </table>
+</section>
+
+<section id="teams">
+    <h2>Teams</h2>
+    <div id="teamsContainer"></div>
+</section>
+
+<section id="matches">
+    <h2>Matchday Live</h2>
+    <div id="matchContainer"></div>
+</section>
+
+<div id="teamModal" class="modal">
+    <div class="modal-content">
+        <span onclick="closeModal()" class="close">&times;</span>
+        <div id="teamDetails"></div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+  </html>
